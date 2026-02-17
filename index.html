@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vendedor "Juan de Dios"</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<!-- Esto de abajo trabaja cada nombre de vendedor al incio-->
+<div id="loading-screen">
+<div class="loading-content">
+<h1 class="loading-title">Vendedor <span>"Juan de Dios"</span></h1>
+<div class="spinner-mexican">
+<div class="spinner-circle green"></div>
+<div class="spinner-circle white"></div>
+<div class="spinner-circle red"></div>
+</div>
+<p class="loading-text">Cargando...</p>
+</div>
+</div>
+<div id="app">
+<!-- Esto de abajo trabaja las letras Quinielas El Wero y la imagen del logo -->
+<header class="app-header app-header--compact app-header--mex">
+<div class="app-header__brand">
+<span class="brand-top">Quinielas "El Wero"</span>
+</div>
+<div class="app-header__logo">
+<img src="logos/logo.png" alt="Logo El Wero Quinielas" />
+</div>
+</header>
+<!-- Esto de abajo trabaja el contenido de Facebook, Whats App, Grupo -->
+<nav class="sub-nav show" id="sub-nav-inicio">
+<a href="https://www.facebook.com/profile.php?id=61586293432281" target="_blank" class="sub-nav__item">
+<span class="sub-nav__icon"><i class="fa-brands fa-facebook"></i></span>
+<span class="sub-nav__label">Facebook</span>
+</a>
+<a href="https://whatsapp.com/channel/0029VbBeTREDZ4LYMSgzS219" target="_blank" class="sub-nav__item">
+<span class="sub-nav__icon"><i class="fa-brands fa-whatsapp"></i></span>
+<span class="sub-nav__label">WhatsApp</span>
+</a>
+<a href="https://chat.whatsapp.com/LwpbaysGDifCH9dznkIfy8" target="_blank" class="sub-nav__item">
+<span class="sub-nav__icon"><i class="fa-solid fa-users"></i></span>
+<span class="sub-nav__label">Grupo J7</span>
+</a>
+</nav>
+<!--Esto de abajo trabaja las subpestañas de Horarios , Porcentajes -->
+<nav class="sub-nav" id="sub-nav-analisis">
+<button class="sub-nav__item sub-nav__item--active" data-section="analisis">
+<span class="sub-nav__icon"><i class="fa-solid fa-chart-column"></i></span>
+<span class="sub-nav__label">Horarios</span>
+</button>
+<button class="sub-nav__item" data-section="porcentajes">
+<span class="sub-nav__icon"><i class="fa-solid fa-percent"></i></span>
+<span class="sub-nav__label">Porcentajes</span>
+</button>
+</nav>
+<!--Esto de abajo trabaja las subpestañas de Resultados -->
+<nav class="sub-nav" id="sub-nav-resultados">
+<button class="sub-nav__item sub-nav__item--active" data-section="quinielas">
+<span class="sub-nav__icon"><i class="fa-solid fa-file-pen"></i></span>
+<span class="sub-nav__label">Mis quinielas</span>
+</button>
+<button class="sub-nav__item" data-section="lista">
+<span class="sub-nav__icon"><i class="fa-solid fa-folder"></i></span>
+<span class="sub-nav__label">Lista</span>
+</button>
+<button class="sub-nav__item" data-section="primero">
+<span class="sub-nav__icon"><i class="fa-solid fa-medal"></i></span>
+<span class="sub-nav__label">1er Lugar</span>
+</button>
+<button class="sub-nav__item" data-section="segundo">
+<span class="sub-nav__icon"><i class="fa-solid fa-award"></i></span>
+<span class="sub-nav__label">2do Lugar</span>
+</button>
+<button class="sub-nav__item" data-section="verificar">
+<span class="sub-nav__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+<span class="sub-nav__label">Verificar</span>
+</button>
+</nav>
+<!--Esto de abajo trabaja las subpestañas de Administrador -->
+<nav class="sub-nav" id="sub-nav-administrador" style="display: none;">
+<button class="sub-nav__item sub-nav__item--active" data-admin-section="por-aprobar">
+<span class="sub-nav__icon"><i class="fa-solid fa-clock"></i></span>
+<span class="sub-nav__label">No confirmadas</span>
+</button>
+<button class="sub-nav__item" data-admin-section="aprobadas">
+<span class="sub-nav__icon"><i class="fa-solid fa-check-circle"></i></span>
+<span class="sub-nav__label">Confirmadas</span>
+</button>
+<button class="sub-nav__item" data-admin-section="jugando">
+<span class="sub-nav__icon"><i class="fa-solid fa-futbol"></i></span>
+<span class="sub-nav__label">Jugando</span>
+</button>
+</nav>
+<!--Esto de abajo trabaja el contenido de inicio -->
+<div id="view-inicio" class="view view--active">
+<main class="splash-inicio-wero">
+<div class="balon-animado balon-1">⚽</div>
+<div class="balon-animado balon-2">⚽</div>
+<div class="balon-animado balon-3">⚽</div>
+<div class="balon-animado balon-4">⚽</div>
+<div class="balon-animado balon-5">⚽</div>
+<div class="balon-animado balon-6">⚽</div>
+<div class="balon-animado balon-7">⚽</div>
+<div class="balon-animado balon-8">⚽</div>
+<div class="balon-animado balon-9">⚽</div>
+<div class="balon-animado balon-10">⚽</div>
+<header class="hero-header-wero">
+<h1>Prueba tu suerte y gana 🍀</h1>
+</header>
+<div class="hero-logo-wero">
+<img src="logos/mexico.png" alt="México" loading="eager">
+</div>
+<div class="linea-decorativa-mexico"></div>
+<div class="hero-text-wero">
+<p class="phrase-main">El balón rueda y el destino juega.</p>
+<p class="phrase-sub">Completa tu quiniela y juega tu destino 🏆</p>
+</div>
+</main>
+</div>
+<!--Esto de abajo trabaja el contenido de horarios -->
+<div id="view-analisis" class="view">
+<div id="analisis" class="app-main active">
+<div class="horarios-wrapper">
+<div class="matches-carousel" id="matchesCarousel"></div>
+<div class="swipe-tutorial">
+<div class="swipe-container">
+<div class="balon-left">⚽</div>
+<div class="swipe-text">← Desliza →</div>
+<div class="balon-right">⚽</div>
+</div>
+</div>
+<div class="carousel-indicators">
+<div class="indicator-dot active" onclick="goToMatch(0)"></div>
+<div class="indicator-dot" onclick="goToMatch(1)"></div>
+<div class="indicator-dot" onclick="goToMatch(2)"></div>
+<div class="indicator-dot" onclick="goToMatch(3)"></div>
+<div class="indicator-dot" onclick="goToMatch(4)"></div>
+<div class="indicator-dot" onclick="goToMatch(5)"></div>
+<div class="indicator-dot" onclick="goToMatch(6)"></div>
+<div class="indicator-dot" onclick="goToMatch(7)"></div>
+<div class="indicator-dot" onclick="goToMatch(8)"></div>
+</div>
+</div>
+</div>
+<!--Esto de abajo trabaja el contenido de la subpestaña de Porcentajes -->
+<div id="porcentajes" class="app-main">
+<div class="porcentajes-wrapper">
+<div class="swipe-tutorial">
+<div class="swipe-container">
+<div class="balon-left">⚽</div>
+<div class="swipe-text">← Desliza →</div>
+<div class="balon-right">⚽</div>
+</div>
+</div>
+<div class="porcentajes-carousel" id="porcentajesCarousel"></div>
+<div class="carousel-indicators-perc">
+<div class="indicator-dot-perc active" onclick="goToPercentageMatch(0)"></div>
+<div class="indicator-dot-perc" onclick="goToPercentageMatch(1)"></div>
+<div class="indicator-dot-perc" onclick="goToPercentageMatch(2)"></div>
+<div class="indicator-dot-perc" onclick="goToPercentageMatch(3)"></div>
+<div class="indicator-dot-perc" onclick="goToPercentageMatch(4)"></div>
+<div class="indicator-dot-perc" onclick="goToPercentageMatch(5)"></div>
+<div class="indicator-dot-perc" onclick="goToPercentageMatch(6)"></div>
+<div class="indicator-dot-perc" onclick="goToPercentageMatch(7)"></div>
+<div class="indicator-dot-perc" onclick="goToPercentageMatch(8)"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Esto de abajo trabaja el contenido de Quiniela -->
+<section id="view-quiniela" class="view">
+<div class="quiniela-pro-wrapper">
+<header class="app-header-q">
+<div class="header-top-q">
+<div class="input-group-q">
+<i class="fa-solid fa-user"></i>
+<input type="text" id="userName" placeholder="Nombre de usuario" autocomplete="off">
+</div>
+<div class="header-actions-q">
+<button class="btn-primary-sm-q" id="btnSaveHeader">Guardar 💾</button>
+<button class="btn-icon-q" id="btnInfo">📋</button>
+<button class="btn-icon-q" id="headerPrice">💰</button>
+</div>
+</div>
+</header>
+<main class="match-container-q" id="matchList"></main>
+<footer class="app-footer-q">
+<div class="footer-grid-q">
+<button class="action-btn-q" id="btnDelete">
+<span class="btn-label">Borrar</span>
+<span class="btn-content">🗑️</span>
+</button>
+<button class="action-btn-q" id="btnRandom">
+<span class="btn-label">Aleatoria</span>
+<span class="btn-content">🎲</span>
+</button>
+<button class="action-btn-q" id="btnCombos">
+<span class="btn-label">Combinaciones</span>
+<span class="btn-content">0</span>
+</button>
+<button class="action-btn-q highlight-q" id="btnTotal">
+<span class="btn-label">Precio</span>
+<span class="btn-content">$0</span>
+</button>
+<button class="action-btn-q" id="btnLoadSaved">
+<span class="btn-label">Guardadas</span>
+<span class="btn-content">💾</span>
+</button>
+<button class="action-btn-q send-btn-q" id="btnSend">
+<span class="btn-label">Enviar</span>
+<span class="btn-content">✅</span>
+</button>
+</div>
+</footer>
+</div>
+</section>
+<!--Esto de abajo trabaja las subpestañas de Resultados -->
+<div id="view-resultados" class="view">
+<div id="quinielas" class="app-main active">
+<h2>Mis quinielas</h2>
+</div>
+<div id="lista" class="app-main">
+<h2>Lista</h2>
+<div id="content-lista" class="sub-section">
+<div class="resultados-wrapper">
+<div class="resultados-loading" id="resultadosLoading">
+<div class="spinner-resultados"></div>
+<p>Cargando tabla...</p>
+</div>
+<div class="resultados-error" id="resultadosError" style="display: none;">
+<p>Error al cargar datos ⚠️ </p>
+<button class="btn-reload" onclick="cargarTablaResultados()">Reintentar</button>
+</div>
+<div class="tabla-resultados-container" id="tablaResultadosContainer" style="display: none;">
+<div class="tabla-header" id="tablaHeader"></div>
+<div class="tabla-body" id="tablaBody"></div>
+</div>
+</div>
+</div>
+</div>
+<div id="primero" class="app-main">
+<h2>1er Lugar</h2>
+</div>
+<div id="segundo" class="app-main">
+<h2>2do Lugar</h2>
+</div>
+<div id="verificar" class="app-main">
+<h2>Verificar</h2>
+</div>
+</div>
+<!--Esto de abajo trabaja el contenido de Ayuda -->
+<div id="view-ayuda" class="view">
+<div class="ayuda-container">
+<header class="ayuda-header">
+<h1>Centro de ayuda</h1>
+<p class="ayuda-subtitle">Estamos aquí para ayudarte</p>
+</header>
+<section class="ayuda-section">
+<div class="ayuda-grid">
+<div class="ayuda-card" onclick="mostrarAlertaAyuda('bienvenido')">
+<div class="ayuda-icon">
+<div style="font-size: 26px;">👋</div>
+</div>
+<h3>Bienvenido</h3>
+</div>
+<div class="ayuda-card" onclick="mostrarAlertaAyuda('como-jugar')">
+<div class="ayuda-icon">
+<div style="font-size: 26px;">🎮</div>
+</div>
+<h3>Cómo jugar?</h3>
+</div>
+<div class="ayuda-card" onclick="mostrarAlertaAyuda('preguntas-frecuentes')">
+<div class="ayuda-icon">
+<div style="font-size: 26px;">❓</div>
+</div>
+<h3>Preguntas frecuentes</h3>
+</div>
+<div class="ayuda-card" onclick="mostrarAlertaAyuda('cosas-que-debes-saber')">
+<div class="ayuda-icon">
+<div style="font-size: 26px;">⚠️</div>
+</div>
+<h3>Cosas que debes de saber</h3>
+</div>
+</div>
+</section>
+<section class="cuentas-section">
+<div class="cuentas-card">
+<div class="cuentas-header" id="cuentasHeader" style="justify-content: center; position: relative;">
+<button class="nav-arrow-btn" id="prevBtn" style="position: absolute; left: 10px;" onclick="navegarCuenta(-1)">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;">
+<polyline points="15 18 9 12 15 6"></polyline>
+</svg>
+</button>
+<h2>Cuentas disponibles</h2>
+<button class="nav-arrow-btn" id="nextBtn" style="position: absolute; right: 10px;" onclick="navegarCuenta(1)">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;">
+<polyline points="9 18 15 12 9 6"></polyline>
+</svg>
+</button>
+</div>
+<div class="cuentas-list" id="cuentasList">
+<div class="cuenta-item visible" onclick="copiarCuenta('1234 1234 1234 1234', 'Bancomer')" style="cursor: pointer; justify-content: center;">
+<div style="text-align: center; width: 100%;">
+<div class="bank-icon bancomer" style="margin: 0 auto 10px auto;">
+<span>Bbva</span>
+</div>
+<div class="cuenta-info">
+<p class="bank-name">Bancomer</p>
+<p class="cuenta-number">1234 1234 1234 1234</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!--Esto de abajo trabaja el contenido de Administrador -->
+<div id="view-administrador" class="view">
+<div id="admin-por-aprobar" class="app-main active"></div>
+<div id="admin-aprobadas" class="app-main"></div>
+<div id="admin-jugando" class="app-main"></div>
+</div>
+<!--Esto de abajo trabaja los botones de las pestañas tipo Inicio,Analisis,Quiniela,Resultados,Ayuda-->
+<nav class="bottom-nav" aria-label="Navegación principal">
+<button class="bottom-nav__item bottom-nav__item--active" data-view="view-inicio">
+<span class="bottom-nav__icon"><i class="fa-solid fa-house"></i></span>
+<span class="bottom-nav__label">Inicio</span>
+</button>
+<button class="bottom-nav__item" data-view="view-analisis">
+<span class="bottom-nav__icon"><i class="fa-solid fa-chart-line"></i></span>
+<span class="bottom-nav__label">Análisis</span>
+</button>
+<button class="bottom-nav__item" data-view="view-quiniela">
+<span class="bottom-nav__icon"><i class="fa-solid fa-file-pen"></i></span>
+<span class="bottom-nav__label">Quiniela</span>
+</button>
+<button class="bottom-nav__item" data-view="view-resultados">
+<span class="bottom-nav__icon"><i class="fa-solid fa-trophy"></i></span>
+<span class="bottom-nav__label">Resultados</span>
+</button>
+<button class="bottom-nav__item" data-view="view-ayuda">
+<span class="bottom-nav__icon"><i class="fa-solid fa-circle-question"></i></span>
+<span class="bottom-nav__label">Ayuda</span>
+</button>
+<button class="bottom-nav__item" data-view="view-administrador" id="admin-tab" style="display: none;">
+<span class="bottom-nav__icon">🛠️</span>
+<span class="bottom-nav__label">Administrador</span>
+</button>
+</nav>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
